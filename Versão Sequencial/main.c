@@ -194,7 +194,7 @@ arqY = fopen("C://Users//pedro//Documents//CaixeiroViajante//grafoY.txt", "rt");
   int caminho[num_vertices ];
   double distancia_melhor = INFINITY;
   double distancia_caminho = 0.0;
-  #pragma omp parallel for private(caminho, distancia_caminho) reduction(min:distancia_melhor)
+
   for (int iteracao = 0; iteracao < MAX_INTERACAO; iteracao++) {
 
     for (int i = 0; i < N_FORMIGA; i++) {
