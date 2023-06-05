@@ -80,10 +80,12 @@ int selecionar_proximo_vertice(grafo *g, int atual, int *visitado) {
 
 
   double limite = 0.0;
-  double limite_atual=0.0;
+  double limite_max=0.5;
+
   for (int k = 0; k < g->num_vertices; k++) {
     limite += probabilidades[k] / soma_probabilidades;
-    if( limite> limite_atual){
+    if( limite> limite_max){
+          //("Limite %f",limite);
       return k;
     }
   }
